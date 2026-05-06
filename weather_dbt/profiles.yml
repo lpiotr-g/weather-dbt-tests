@@ -1,0 +1,11 @@
+weather_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: bigquery
+      method: oauth
+      project: lpiotr-composer-dev-1
+      dataset: weather_data
+      threads: 4
+      timeout_seconds: 300
+      location: US

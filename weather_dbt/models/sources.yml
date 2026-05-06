@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: weather_data
+    database: lpiotr-composer-dev-1
+    schema: weather_data
+    tables:
+      - name: sensor_readings
+        description: "Raw weather sensor readings."

@@ -1,0 +1,24 @@
+environments:
+  dev:
+    # TODO: Replace with your GCP project
+    project: "lpiotr-composer-dev-1"
+
+    # TODO: Replace with your region
+    region: "us-central1"
+
+    # TODO: Replace with your Composer environment
+    composer_environment: "composer3-cluster"
+
+    # TODO: Replace with your artifacts bucket
+    artifact_storage:
+      bucket: "bucket-for-artifacts-pipelines-tests"
+      path_prefix: dbt-pipelines-tests
+
+    variables:
+      # TODO: Replace with your service account
+      service_account: "YOUR_SERVICE_ACCOUNT"
+      # TODO: Replace with your network URI
+      network_uri: projects/lpiotr-composer-dev-1/global/networks/default
+
+    pipelines:
+      - source: dbt-pipeline.yaml
